@@ -130,7 +130,7 @@ function App() {
 
   useEffect(() => {
     // Initialize theme
-    const savedTheme = localStorage.getItem('theme') || 'light';
+    const savedTheme = localStorage.getItem('theme') || 'dark';
     document.documentElement.classList.add(`theme-${savedTheme}`);
 
     // Intersection Observer for chapter tracking

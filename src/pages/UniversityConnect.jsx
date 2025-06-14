@@ -6,7 +6,8 @@ import ucHomepage from '../assets/img/uc_homepage.jpeg';
 
 const UniversityConnect = () => {
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', 'dark');
+    document.documentElement.classList.remove('theme-light');
+    document.documentElement.classList.add('theme-dark');
   }, []);
 
   return (
