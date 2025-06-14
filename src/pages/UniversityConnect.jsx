@@ -18,9 +18,9 @@ const UniversityConnect = () => {
           <nav>
             <ul>
               <li><Link to="/">Home</Link></li>
-              <li><a href="/#web">Web</a></li>
-              <li><a href="/#visual">Visual</a></li>
-              <li><a href="/#written">Written</a></li>
+              <li><Link to="/#web">Web</Link></li>
+              <li><Link to="/#visual">Visual</Link></li>
+              <li><Link to="/#written">Written</Link></li>
             </ul>
           </nav>
         </FadeInSection>

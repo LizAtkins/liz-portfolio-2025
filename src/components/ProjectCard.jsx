@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const ProjectCard = ({ title, description, image, quote, category, tags, link }) => {
+  const isInternalLink = link && (link.startsWith('/') || link.startsWith('#'));
+  
   return (
     <motion.div 
       className="project-card"
@@ -29,15 +32,25 @@ const ProjectCard = ({ title, description, image, quote, category, tags, link })
           ))}
         </div>
         {link && (
-          <a 
-            href={link} 
-            className="project-link" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            aria-label={`View ${title} project`}
-          >
-            View Project →
-          </a>
+          isInternalLink ? (
+            <Link 
+              to={link} 
+              className="project-link"
+              aria-label={`View ${title} project`}
+            >
+              View Project →
+            </Link>
+          ) : (
+            <a 
+              href={link} 
+              className="project-link" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label={`View ${title} project`}
+            >
+              View Project →
+            </a>
+          )
         )}
       </div>
     </motion.div>
