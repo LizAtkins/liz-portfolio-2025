@@ -62,35 +62,60 @@ const SocialMediaCampaign = () => {
 
           <div className="campaign-grid">
             <div className="campaign-details">
-              <div className="color-palette">
-                <h3>Color Palette</h3>
-                <div className="color-swatches">
-                  <div className="color-swatch">
-                    <div className="swatch iiom-light-blue"></div>
-                    <span className="color-name">Light Blue</span>
-                    <span className="color-hex">#86BCE2</span>
-                  </div>
-                  <div className="color-swatch">
-                    <div className="swatch iiom-dark-blue"></div>
-                    <span className="color-name">Dark Blue</span>
-                    <span className="color-hex">#01427A</span>
-                  </div>
-                  <div className="color-swatch">
-                    <div className="swatch iiom-medium-blue"></div>
-                    <span className="color-name">Medium Blue</span>
-                    <span className="color-hex">#235F9A</span>
-                  </div>
-                  <div className="color-swatch">
-                    <div className="swatch iiom-yellow"></div>
-                    <span className="color-name">Accent Yellow</span>
-                    <span className="color-hex">#F6D038</span>
-                  </div>
-                  <div className="color-swatch">
-                    <div className="swatch iiom-white"></div>
-                    <span className="color-name">White</span>
-                    <span className="color-hex">#FFFFFF</span>
-                  </div>
+              <h3>Color Palette</h3>
+              <div className="color-swatches">
+                <div className="color-swatch">
+                  <div className="swatch iiom-light-blue"></div>
+                  <span className="color-name">Light Blue</span>
+                  <span className="color-hex">#86BCE2</span>
                 </div>
+                <div className="color-swatch">
+                  <div className="swatch iiom-dark-blue"></div>
+                  <span className="color-name">Dark Blue</span>
+                  <span className="color-hex">#01427A</span>
+                </div>
+                <div className="color-swatch">
+                  <div className="swatch iiom-medium-blue"></div>
+                  <span className="color-name">Medium Blue</span>
+                  <span className="color-hex">#235F9A</span>
+                </div>
+                <div className="color-swatch">
+                  <div className="swatch iiom-yellow"></div>
+                  <span className="color-name">Accent Yellow</span>
+                  <span className="color-hex">#F6D038</span>
+                </div>
+                <div className="color-swatch">
+                  <div className="swatch iiom-white"></div>
+                  <span className="color-name">White</span>
+                  <span className="color-hex">#FFFFFF</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="linkedin-posts">
+              <div className="linkedin-posts-row">
+                <SocialMediaPost
+                  title="IIOM Symposium Announcement"
+                  description="Announcing the upcoming IIOM Symposium with key details about the event."
+                  iframeSrc="https://www.linkedin.com/embed/feed/update/urn:li:share:1234567890"
+                />
+                <SocialMediaPost
+                  title="Speaker Spotlight"
+                  description="Highlighting our keynote speakers and their contributions to materials science."
+                  iframeSrc="https://www.linkedin.com/embed/feed/update/urn:li:share:1234567891"
+                />
+              </div>
+              <div className="linkedin-posts-row">
+                <SocialMediaPost
+                  title="Registration Open"
+                  description="Early bird registration is now open for the IIOM Symposium."
+                  iframeSrc="https://www.linkedin.com/embed/feed/update/urn:li:share:1234567892"
+                />
+                <SocialMediaPost
+                  title="Call for Papers"
+                  description="Submit your research papers for the IIOM Symposium."
+                  iframeSrc="https://www.linkedin.com/embed/feed/update/urn:li:share:1234567893"
+                />
               </div>
             </div>
           </div>
