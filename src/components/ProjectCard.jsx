@@ -1,0 +1,47 @@
+import { motion } from 'framer-motion';
+
+const ProjectCard = ({ title, description, image, quote, category, tags, link }) => {
+  return (
+    <motion.div 
+      className="project-card"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      whileHover={{ y: -5 }}
+      transition={{ duration: 0.3 }}
+      role="article"
+      aria-labelledby={`project-title-${title.toLowerCase().replace(/\s+/g, '-')}`}
+    >
+      {category === 'written' && quote ? (
+        <div className="project-quote">
+          <blockquote cite={link}>{quote}</blockquote>
+        </div>
+      ) : image ? (
+        <div className="project-image">
+          <img src={image} alt={`${title} project preview`} />
+        </div>
+      ) : null}
+      <div className="project-content">
+        <h3 id={`project-title-${title.toLowerCase().replace(/\s+/g, '-')}`}>{title}</h3>
+        <p>{description}</p>
+        <div className="project-tags" role="list" aria-label="Project technologies">
+          {tags.map((tag, index) => (
+            <span key={index} className="tag" role="listitem">{tag}</span>
+          ))}
+        </div>
+        {link && (
+          <a 
+            href={link} 
+            className="project-link" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label={`View ${title} project`}
+          >
+            View Project →
+          </a>
+        )}
+      </div>
+    </motion.div>
+  );
+};
+
+export default ProjectCard; 

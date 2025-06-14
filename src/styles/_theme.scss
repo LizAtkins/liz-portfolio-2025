@@ -1,0 +1,175 @@
+@use 'sass:map';
+@use 'sass:color';
+
+// Font Variables
+$font-primary: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$font-secondary: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$font-mono: 'Space Grotesk', 'SF Mono', 'Fira Code', monospace;
+
+// Base Colors - Light Theme
+$base-colors: (
+  'primary': #2D1B69,
+  'primary-light': #3D2B79,
+  'primary-lighter': #4D3B89,
+  'primary-dark': #1D0B59,
+  'primary-darker': #0D0049,
+  
+  'secondary': #6B4E98,
+  'secondary-light': #7B5EA8,
+  'secondary-lighter': #8B6EB8,
+  'secondary-dark': #5B3E88,
+  'secondary-darker': #4B2E78,
+  
+  'accent': #9D4EDD,
+  'accent-light': #AD5EED,
+  'accent-lighter': #BD6EFD,
+  'accent-dark': #8D3ECD,
+  'accent-darker': #7D2EBD,
+  
+  'background': #F8F5FF,
+  'background-light': #FFFFFF,
+  'background-lighter': #FFFFFF,
+  'background-dark': #E8E5F0,
+  'background-darker': #D8D5E0,
+  
+  'surface': #FFFFFF,
+  'surface-light': #FFFFFF,
+  'surface-lighter': #FFFFFF,
+  'surface-dark': #F0EDFA,
+  'surface-darker': #E0DDF0,
+  
+  'text': #2D1B69,
+  'text-light': #6B4E98,
+  'text-lighter': #8B6EB8,
+  'text-dark': #1D0B59,
+  'text-darker': #0D0049,
+  
+  'border': #E2D6FF,
+  'border-light': #F2E6FF,
+  'border-lighter': #FFFFFF,
+  'border-dark': #D2C6EF,
+  'border-darker': #C2B6DF,
+  
+  'success': #7B2CBF,
+  'success-light': #8B3CCF,
+  'success-lighter': #9B4CDF,
+  'success-dark': #6B1CAF,
+  'success-darker': #5B0C9F,
+  
+  'warning': #C77DFF,
+  'warning-light': #D78DFF,
+  'warning-lighter': #E79DFF,
+  'warning-dark': #B76DEF,
+  'warning-darker': #A75DDF,
+  
+  'error': #FF6B6B,
+  'error-light': #FF7B7B,
+  'error-lighter': #FF8B8B,
+  'error-dark': #EF5B5B,
+  'error-darker': #DF4B4B
+);
+
+// Base Colors - Dark Theme
+$base-colors-dark: (
+  'primary': #E2D6FF,
+  'primary-light': #F2E6FF,
+  'primary-lighter': #FFFFFF,
+  'primary-dark': #D2C6EF,
+  'primary-darker': #C2B6DF,
+  
+  'secondary': #C77DFF,
+  'secondary-light': #D78DFF,
+  'secondary-lighter': #E79DFF,
+  'secondary-dark': #B76DEF,
+  'secondary-darker': #A75DDF,
+  
+  'accent': #9D4EDD,
+  'accent-light': #AD5EED,
+  'accent-lighter': #BD6EFD,
+  'accent-dark': #8D3ECD,
+  'accent-darker': #7D2EBD,
+  
+  'background': #1A0B2E,
+  'background-light': #2A1B3E,
+  'background-lighter': #3A2B4E,
+  'background-dark': #0A001E,
+  'background-darker': #00000E,
+  
+  'surface': #2D1B69,
+  'surface-light': #3D2B79,
+  'surface-lighter': #4D3B89,
+  'surface-dark': #1D0B59,
+  'surface-darker': #0D0049,
+  
+  'text': #E2D6FF,
+  'text-light': #C77DFF,
+  'text-lighter': #E79DFF,
+  'text-dark': #D2C6EF,
+  'text-darker': #C2B6DF,
+  
+  'border': #6B4E98,
+  'border-light': #7B5EA8,
+  'border-lighter': #8B6EB8,
+  'border-dark': #5B3E88,
+  'border-darker': #4B2E78,
+  
+  'success': #7B2CBF,
+  'success-light': #8B3CCF,
+  'success-lighter': #9B4CDF,
+  'success-dark': #6B1CAF,
+  'success-darker': #5B0C9F,
+  
+  'warning': #C77DFF,
+  'warning-light': #D78DFF,
+  'warning-lighter': #E79DFF,
+  'warning-dark': #B76DEF,
+  'warning-darker': #A75DDF,
+  
+  'error': #FF6B6B,
+  'error-light': #FF7B7B,
+  'error-lighter': #FF8B8B,
+  'error-dark': #EF5B5B,
+  'error-darker': #DF4B4B
+);
+
+// IIOM Symposium Color Palette
+$iiom-light-blue: #86BCE2;
+$iiom-dark-blue: #01427A;
+$iiom-medium-blue: #235F9A;
+$iiom-yellow: #F6D038;
+$iiom-white: #FFFFFF;
+
+// Theme mixins
+@mixin theme-colors($theme) {
+  @each $key, $value in $theme {
+    --color-#{$key}: #{$value};
+  }
+}
+
+// Theme classes
+.theme-light {
+  @include theme-colors($base-colors);
+  color-scheme: light;
+}
+
+.theme-dark {
+  @include theme-colors($base-colors-dark);
+  color-scheme: dark;
+}
+
+// Color function replacements
+@function adjust-color($color, $lightness: 0) {
+  @return color.adjust($color, $lightness: $lightness);
+}
+
+:root {
+  // ... existing variables ...
+
+  // Success colors
+  --color-success: #10b981;
+  --color-success-light: #d1fae5;
+
+  // Error colors
+  --color-error: #ef4444;
+  --color-error-light: #fee2e2;
+} 

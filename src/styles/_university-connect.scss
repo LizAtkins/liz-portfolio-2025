@@ -1,0 +1,235 @@
+@import 'theme';
+
+.platform-intro, .platform-overview {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  padding: 2rem;
+  background: var(--background-secondary);
+  border-radius: 12px;
+
+  h3 {
+    color: var(--text-primary);
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+  }
+}
+
+.tech-stack {
+  margin-top: 2rem;
+  text-align: center;
+
+  h4 {
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .tech-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .tech-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg,
+      var(--color-surface) 0%,
+      var(--color-surface-dark) 100%
+    );
+    color: var(--text-primary);
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+    }
+  }
+}
+
+.platform-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+    gap: 2rem;
+  }
+}
+
+.platform-showcase {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--background-secondary);
+  border-radius: 12px;
+
+  .platform-image {
+    width: 100%;
+    margin-bottom: 1rem;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-4px);
+      }
+    }
+
+    .image-caption {
+      text-align: center;
+      margin-top: 1rem;
+      color: var(--text-secondary);
+      font-size: 1rem;
+      font-style: italic;
+    }
+  }
+}
+
+.platform-details {
+  width: 100%;
+  max-width: 800px;
+  padding: 2rem;
+  background: linear-gradient(135deg,
+    var(--color-background) 0%,
+    var(--color-background-dark) 100%
+  );
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-secondary);
+    opacity: 0.05;
+    z-index: 0;
+    border-radius: 12px;
+  }
+}
+
+.color-palette {
+  margin-top: 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+
+  h3 {
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+.color-swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.color-swatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+
+  .swatch {
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &.uc-primary-red {
+      background-color: #E63946;
+    }
+
+    &.uc-dark-red {
+      background-color: #B81D3A;
+    }
+
+    &.uc-light-red {
+      background-color: #FF6B6B;
+    }
+
+    &.uc-light-pink {
+      background-color: #FBD1DB;
+    }
+
+    &.uc-primary-blue {
+      background-color: #3E80F5;
+    }
+
+    &.uc-light-blue {
+      background-color: #CEE1F2;
+    }
+
+    &.uc-dark-gray {
+      background-color: #2D3E4E;
+    }
+
+    &.uc-white {
+      background-color: #FFFFFF;
+      border: 1px solid #E0E0E0;
+    }
+  }
+
+  .color-name {
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+
+  .color-hex {
+    font-family: $font-mono;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+  }
+} 
