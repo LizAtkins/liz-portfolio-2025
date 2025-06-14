@@ -14,7 +14,7 @@ export const projects = {
       image: ucWebsite,
       category: "web",
       tags: ["Angular", "Tailwind CSS", "TypeScript", "Prisma"],
-      link: "/liz-portfolio-2025/university-connect"
+      link: "/university-connect"
     },
     {
       title: "NA-WAMS Symposium Website",
@@ -56,7 +56,7 @@ export const projects = {
       image: iiomCampaign,
       category: "visual",
       tags: ["Social Media", "Graphic Design", "Content Strategy", "Conference Marketing"],
-      link: "/liz-portfolio-2025/social-media-campaign"
+      link: "/social-media-campaign"
     }
   ],
   written: [
