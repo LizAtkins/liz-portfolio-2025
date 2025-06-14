@@ -4,6 +4,7 @@ import windowsWebsite from '../assets/img/windows_website.jpeg';
 import clarionWebsite from '../assets/img/clarion_website.jpeg';
 import etsyShop from '../assets/img/etsy_shop.jpeg';
 import iiomCampaign from '../assets/img/iiom_campaign.jpeg';
+import webTutorial from '../assets/img/web_tutorial.jpg';
 
 export const projects = {
   web: [
@@ -60,12 +61,12 @@ export const projects = {
   ],
   written: [
     {
-      title: "Build Your First Website Today: A Beginner's Guide",
-      description: "A comprehensive tutorial series on LinkedIn that guides beginners through creating their first website using Visual Studio Code. Covers HTML, CSS, and Bootstrap fundamentals with practical examples and step-by-step instructions.",
-      image: "/src/assets/img/web_tutorial.jpg",
+      title: "Technical Writing: Web Development Tutorial",
+      description: "Created a comprehensive tutorial series on web development fundamentals, covering HTML, CSS, and JavaScript basics. The series was published on Medium and received positive feedback for its clear explanations and practical examples.",
+      image: webTutorial,
       category: "written",
-      tags: ["Technical Writing", "Web Development", "Tutorial", "Bootstrap"],
-      link: "https://www.linkedin.com/pulse/build-your-first-website-today-beginners-guide-part-1-liz-atkins-6nzme/?trackingId=pDAlwBeZSKWYbAQpohQrYQ%3D%3D"
+      tags: ["Technical Writing", "Web Development", "Tutorial", "Documentation"],
+      link: "https://medium.com/@lizatkins"
     },
     {
       title: "Should College Students Use Chat GPT?",
