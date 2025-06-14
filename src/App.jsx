@@ -154,7 +154,7 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename="/liz-portfolio-2025">
       <ScrollToSection />
       <Routes>
         <Route path="/" element={
@@ -180,7 +180,7 @@ function App() {
                 </nav>
                 <div className="header-content">
                   <h1>Liz Atkins</h1>
-                  <img src="/src/assets/img/profile-avatar.png" alt="Liz Atkins Profile Avatar" className="profile-avatar" />
+                  <img src="/liz-portfolio-2025/assets/profile-avatar.png" alt="Liz Atkins Profile Avatar" className="profile-avatar" />
                   <div className="title-container">
                     <p className="title">Web Development</p>
                     <p className="title">Visual Design</p>
