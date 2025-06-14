@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react
 import { useEffect, useState } from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import ProjectCard from './components/ProjectCard';
-import ThemeToggle from './components/common/ThemeToggle';
 import FadeInSection from './components/common/FadeInSection';
 import SparkleTrail from './components/common/SparkleTrail';
 import ContactForm from './components/ContactForm';
@@ -222,15 +221,14 @@ function App() {
             </main>
 
             <Footer setIsContactFormOpen={setIsContactFormOpen} />
-            <ThemeToggle />
             <ContactForm 
               isOpen={isContactFormOpen} 
               onClose={() => setIsContactFormOpen(false)} 
             />
           </div>
         } />
-        <Route path="/social-media-campaign" element={<SocialMediaCampaign />} />
         <Route path="/university-connect" element={<UniversityConnect />} />
+        <Route path="/social-media-campaign" element={<SocialMediaCampaign />} />
       </Routes>
     </Router>
   );
