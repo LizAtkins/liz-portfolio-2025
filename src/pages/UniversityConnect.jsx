@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import FadeInSection from '../components/common/FadeInSection';
 import SparkleTrail from '../components/common/SparkleTrail';
 import ThemeToggle from '../components/common/ThemeToggle';
+import ucHomepage from '../assets/img/uc_homepage.jpeg';
 
 const UniversityConnect = () => {
   useEffect(() => {
@@ -128,7 +129,7 @@ const UniversityConnect = () => {
                 <div className="platform-showcase">
                   <div className="platform-image">
                     <img 
-                      src="/src/assets/img/uc_homepage.jpeg" 
+                      src={ucHomepage} 
                       alt="University Connect Platform Homepage"
                       className="rounded-image"
                     />
