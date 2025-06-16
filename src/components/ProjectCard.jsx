@@ -24,7 +24,27 @@ const ProjectCard = ({ title, description, image, quote, category, tags, link })
         </div>
       ) : null}
       <div className="project-content">
-        <h3 id={`project-title-${title.toLowerCase().replace(/\s+/g, '-')}`}>{title}</h3>
+        {link && (
+          isInternalLink ? (
+            <Link 
+              to={link} 
+              className="project-title-link"
+              aria-label={`View ${title} project`}
+            >
+              <h3 id={`project-title-${title.toLowerCase().replace(/\s+/g, '-')}`}>{title}</h3>
+            </Link>
+          ) : (
+            <a 
+              href={link} 
+              className="project-title-link" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label={`View ${title} project`}
+            >
+              <h3 id={`project-title-${title.toLowerCase().replace(/\s+/g, '-')}`}>{title}</h3>
+            </a>
+          )
+        )}
         <p>{description}</p>
         <div className="project-tags" role="list" aria-label="Project technologies">
           {tags.map((tag, index) => (

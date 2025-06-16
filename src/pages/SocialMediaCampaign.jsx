@@ -60,7 +60,7 @@ const SocialMediaCampaign = () => {
             </div>
 
             <div className="tech-stack" style={{ marginBottom: '3rem' }}>
-              <h3>Platforms Used</h3>
+              <h3>Skills Used</h3>
               <div className="tech-buttons" style={{ marginTop: '1.5rem' }}>
                 <span className="tech-button">Social Media</span>
                 <span className="tech-button">Graphic Design</span>
