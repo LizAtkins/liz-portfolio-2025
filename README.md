@@ -1,11 +1,10 @@
 # Liz Atkins Portfolio 2025
 
-A modern, narrative-driven portfolio website that tells a story through carefully crafted chapters. Each chapter represents a different aspect of my work, from web development to visual design, creating an engaging journey through my professional experience.
+A modern, narrative-driven portfolio website that tells a story through chapters. Each chapter represents a different aspect of my work, from web development to visual design, creating an engaging journey through my professional experience.
 
 ## 🌟 Features
 
 - 📖 Story-driven navigation with chapters
-- 🎯 Interactive introduction section
 - 📚 Chapter-based content organization
 - 🎨 Smooth animations and transitions
 - 📱 Fully responsive design
@@ -68,7 +67,7 @@ The portfolio is organized into chapters:
 1. **Introduction** - Welcome and overview
 2. **Web Chapter** - Web development projects
 3. **Visual Chapter** - Design and visual work
-4. **Written Chapter** - Content and copywriting
+4. **Written Chapter** - Content and technical writing
 
 Each chapter contains:
 - A narrative introduction
@@ -91,14 +90,6 @@ The portfolio is fully responsive and works on:
 - Mobile devices
 - Different screen orientations
 
-## 🎯 Features in Detail
-
-- **Chapter Navigation**: Smooth scrolling between chapters with progress tracking
-- **Project Cards**: Interactive cards with hover effects and project details
-- **Animations**: Smooth transitions using Framer Motion and GSAP
-- **Contact Form**: Integrated Formspree for form submissions
-- **Accessibility**: Semantic HTML and ARIA labels
-- **Performance**: Optimized assets and lazy loading
 
 ## 🤝 Contributing
 
