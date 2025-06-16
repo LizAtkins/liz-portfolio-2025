@@ -66,7 +66,7 @@ export const projects = {
       image: webTutorial,
       category: "written",
       tags: ["Technical Writing", "Web Development", "Tutorial", "Documentation"],
-      link: "https://medium.com/@lizatkins"
+      link: "https://www.linkedin.com/pulse/build-your-first-website-today-beginners-guide-part-1-liz-atkins-6nzme"
     },
     {
       title: "Should College Students Use Chat GPT?",
