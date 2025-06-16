@@ -28,37 +28,39 @@ const UniversityConnect = () => {
 
       <main>
         <FadeInSection>
-          <section className="platform-intro">
-            <h3>University Connect Platform</h3>
-            <p>
-              A comprehensive platform designed to streamline communication and resource sharing between universities and their students. 
-              The platform features a modern, intuitive interface that makes it easy for users to find and access the information they need.
-            </p>
-          </section>
-
-          <section className="platform-overview">
-            <h3>Project Overview</h3>
-            <p>
-              As part of the development team, I contributed to the front-end implementation of the platform, 
-              focusing on creating responsive layouts and interactive components that enhance the user experience.
-            </p>
-          </section>
-
-          <div className="platform-grid">
-            <div className="platform-showcase">
-              <div className="platform-image">
-                <img 
-                  src={ucHomepage} 
-                  alt="University Connect Platform Homepage"
-                  className="rounded-image"
-                />
-                <div className="image-caption">
-                  <p>The redesigned homepage featuring the new color scheme and improved UI elements</p>
-                </div>
-              </div>
+          <section className="chapter">
+            <div className="chapter-header">
+              <span className="chapter-number">Web Development</span>
+              <h2>University Connect Platform</h2>
+              <p className="chapter-intro">
+                A comprehensive platform designed to streamline communication and resource sharing between universities and their students. 
+                The platform features a modern, intuitive interface that makes it easy for users to find and access the information they need.
+              </p>
             </div>
 
-            <div className="platform-details">
+            <section className="platform-overview">
+              <h3>Project Overview</h3>
+              <p>
+                As part of the development team, I contributed to the front-end implementation of the platform, 
+                focusing on creating responsive layouts and interactive components that enhance the user experience.
+                Key improvements included streamlining the navigation, restructuring the features using Material Design, 
+                and implementing a more intuitive user interface and simplified call-to-action elements. 
+                The redesign removed unnecessary complexity while maintaining a professional and modern appearance.
+              </p>
+            </section>
+
+            <section className="tech-stack" style={{ marginBottom: '3rem' }}>
+              <h3>Technologies Used</h3>
+              <div className="tech-buttons" style={{ marginTop: '1.5rem' }}>
+                <span className="tech-button">Angular</span>
+                <span className="tech-button">TypeScript</span>
+                <span className="tech-button">Tailwind CSS</span>
+                <span className="tech-button">Prisma</span>
+                <span className="tech-button">Node.js</span>
+              </div>
+            </section>
+
+            <div className="platform-details" style={{ maxWidth: '800px', margin: '0 auto' }}>
               <div className="color-palette">
                 <h3>Color Palette</h3>
                 <div className="color-swatches">
@@ -104,19 +106,21 @@ const UniversityConnect = () => {
                   </div>
                 </div>
               </div>
+            </div>
 
-              <div className="tech-stack">
-                <h4>Technologies Used</h4>
-                <div className="tech-buttons">
-                  <span className="tech-button">Angular</span>
-                  <span className="tech-button">TypeScript</span>
-                  <span className="tech-button">Tailwind CSS</span>
-                  <span className="tech-button">Prisma</span>
-                  <span className="tech-button">Node.js</span>
+            <div className="platform-showcase">
+              <div className="platform-image">
+                <img 
+                  src={ucHomepage} 
+                  alt="University Connect Platform Homepage"
+                  className="rounded-image"
+                />
+                <div className="image-caption">
+                  <p>The redesigned homepage featuring the new color scheme and improved UI elements</p>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
         </FadeInSection>
       </main>
     </div>

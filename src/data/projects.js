@@ -71,7 +71,7 @@ export const projects = {
     {
       title: "Should College Students Use Chat GPT?",
       description: "An in-depth analysis of the impact of AI technology on education, exploring both the benefits and challenges of using ChatGPT in academic settings.",
-      quote: "Is this moment more like the invention of the calculator, saving me from the tedium of long division, or more like the invention of the player piano, robbing us of what can be communicated only through human emotion?",
+      quote: "Is this moment more like the invention of the calculator, saving me from the tedium of long division, or more like the invention of the player piano, robbing us of what can be communicated only through human emotion? - Daniel Herman",
       category: "written",
       tags: ["Technology", "Education", "AI", "Opinion"],
       link: "https://www.sinclairclarion.com/home/technology/2023/05/20/should-college-students-use-chat-gpt/"
@@ -79,7 +79,7 @@ export const projects = {
     {
       title: "The Barbie Movie: A Deep Dive into Corporations, Nostalgia, and Feminism",
       description: "A comprehensive analysis of the Barbie movie's impact on corporate strategy, cultural nostalgia, and feminist discourse in modern cinema.",
-      quote: "The Barbie movie combines hyper femininity with feminism. Another example of this was in the early 2000s with the movie 'Legally Blonde'.",
+      quote: "The movie shows that women can embrace their femininity without compromising their feminist beliefs. By presenting characters who are hyper-feminine and strong, intelligent, and ambitious, it challenges the stereotype that femininity and feminism are mutually exclusive.",
       category: "written",
       tags: ["Film Analysis", "Feminism", "Corporate Strategy", "Cultural Impact"],
       link: "https://www.sinclairclarion.com/home/entertainment/2023/09/10/the-barbie-movie-a-deep-dive-into-corporations-nostalgia-and-feminism/"

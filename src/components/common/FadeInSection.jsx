@@ -13,7 +13,8 @@ const FadeInSection = ({ children, delay = 0 }) => {
         }
       });
     }, {
-      threshold: 0.1
+      threshold: 0.1,
+      rootMargin: '50px 0px'
     });
 
     const { current } = domRef;
@@ -33,8 +34,8 @@ const FadeInSection = ({ children, delay = 0 }) => {
       ref={domRef}
       style={{
         opacity: isVisible ? 1 : 0,
-        transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
-        transition: `opacity 0.6s ease-out ${delay}s, transform 0.6s ease-out ${delay}s`,
+        transition: `opacity 0.4s ease-out ${delay}s`,
+        willChange: 'opacity'
       }}
     >
       {children}

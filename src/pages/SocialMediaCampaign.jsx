@@ -44,81 +44,99 @@ const SocialMediaCampaign = () => {
 
       <main>
         <FadeInSection>
-          <section className="campaign-intro">
-            <h3>Social Media Campaign</h3>
-            <p>
-              A comprehensive social media campaign for the International Institute of Materials (IIOM), 
-              focusing on increasing engagement and awareness across multiple platforms.
-            </p>
-          </section>
+          <section className="chapter">
+            <div className="chapter-header">
+              <span className="chapter-number">Visual Design</span>
+              <h2>Social Media Campaign</h2>
+              <p className="chapter-intro">
+                A comprehensive social media campaign for the International Institute of Materials (IIOM), 
+                focusing on increasing engagement and awareness across multiple platforms.
+              </p>
+            </div>
 
-          <section className="campaign-overview">
-            <h3>Campaign Overview</h3>
-            <p>
-              The campaign utilized a carefully crafted color palette and consistent visual language 
-              to create a cohesive brand presence across all social media platforms.
-            </p>
-          </section>
+            <div className="campaign-overview">
+              <h3>Campaign Overview</h3>
+              <p>Led the social media campaign for the IIOM Symposium, creating engaging content across multiple platforms to increase awareness and drive registrations. Developed a cohesive visual identity and messaging strategy that resonated with the materials science community.</p>
+            </div>
 
-          <div className="campaign-grid">
-            <div className="campaign-details">
-              <h3>Color Palette</h3>
-              <div className="color-swatches">
-                <div className="color-swatch">
-                  <div className="swatch iiom-light-blue"></div>
-                  <span className="color-name">Light Blue</span>
-                  <span className="color-hex">#86BCE2</span>
-                </div>
-                <div className="color-swatch">
-                  <div className="swatch iiom-dark-blue"></div>
-                  <span className="color-name">Dark Blue</span>
-                  <span className="color-hex">#01427A</span>
-                </div>
-                <div className="color-swatch">
-                  <div className="swatch iiom-medium-blue"></div>
-                  <span className="color-name">Medium Blue</span>
-                  <span className="color-hex">#235F9A</span>
-                </div>
-                <div className="color-swatch">
-                  <div className="swatch iiom-yellow"></div>
-                  <span className="color-name">Accent Yellow</span>
-                  <span className="color-hex">#F6D038</span>
-                </div>
-                <div className="color-swatch">
-                  <div className="swatch iiom-white"></div>
-                  <span className="color-name">White</span>
-                  <span className="color-hex">#FFFFFF</span>
+            <div className="tech-stack" style={{ marginBottom: '3rem' }}>
+              <h3>Platforms Used</h3>
+              <div className="tech-buttons" style={{ marginTop: '1.5rem' }}>
+                <span className="tech-button">Social Media</span>
+                <span className="tech-button">Graphic Design</span>
+                <span className="tech-button">Content Strategy</span>
+                <span className="tech-button">Conference Marketing</span>
+              </div>
+            </div>
+
+            <div className="platform-details" style={{ maxWidth: '800px', margin: '0 auto' }}>
+              <div className="color-palette">
+                <h3>Color Palette</h3>
+                <div className="color-swatches">
+                  <div className="color-swatch">
+                    <div className="swatch iiom-light-blue"></div>
+                    <span className="color-name">Light Blue</span>
+                    <span className="color-hex">#86BCE2</span>
+                  </div>
+                  <div className="color-swatch">
+                    <div className="swatch iiom-dark-blue"></div>
+                    <span className="color-name">Dark Blue</span>
+                    <span className="color-hex">#01427A</span>
+                  </div>
+                  <div className="color-swatch">
+                    <div className="swatch iiom-medium-blue"></div>
+                    <span className="color-name">Medium Blue</span>
+                    <span className="color-hex">#235F9A</span>
+                  </div>
+                  <div className="color-swatch">
+                    <div className="swatch iiom-yellow"></div>
+                    <span className="color-name">Accent Yellow</span>
+                    <span className="color-hex">#F6D038</span>
+                  </div>
+                  <div className="color-swatch">
+                    <div className="swatch iiom-white"></div>
+                    <span className="color-name">White</span>
+                    <span className="color-hex">#FFFFFF</span>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="linkedin-posts">
-              <div className="linkedin-posts-row">
-                <SocialMediaPost
-                  title="IIOM Symposium Announcement"
-                  description="Announcing the upcoming IIOM Symposium with key details about the event."
-                  iframeSrc="https://www.linkedin.com/embed/feed/update/urn:li:share:1234567890"
-                />
+            <div className="linkedin-posts" style={{ 
+              marginTop: '3rem',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: '2rem'
+            }}>
+              <div className="linkedin-posts-row" style={{
+                display: 'flex',
+                gap: '2rem',
+                justifyContent: 'center'
+              }}>
                 <SocialMediaPost
                   title="Speaker Spotlight"
-                  description="Highlighting our keynote speakers and their contributions to materials science."
-                  iframeSrc="https://www.linkedin.com/embed/feed/update/urn:li:share:1234567891"
+                  description="Created a speaker announcement post featuring Mr. Kenneth Watson, incorporating key facts about his background and expertise to generate interest."
+                  iframeSrc="https://www.linkedin.com/embed/feed/update/urn:li:share:7229507947813371905?collapsed=1"
+                />
+                <SocialMediaPost
+                  title="Sponsorship Opportunity"
+                  description="Designed a graphic-based post to promote remaining sponsorship opportunities, using visual elements to highlight the benefits of participation."
+                  iframeSrc="https://www.linkedin.com/embed/feed/update/urn:li:share:7244048729521942530?collapsed=1"
                 />
               </div>
-              <div className="linkedin-posts-row">
+              <div className="linkedin-posts-row" style={{
+                display: 'flex',
+                justifyContent: 'center'
+              }}>
                 <SocialMediaPost
-                  title="Registration Open"
-                  description="Early bird registration is now open for the IIOM Symposium."
-                  iframeSrc="https://www.linkedin.com/embed/feed/update/urn:li:share:1234567892"
-                />
-                <SocialMediaPost
-                  title="Call for Papers"
-                  description="Submit your research papers for the IIOM Symposium."
-                  iframeSrc="https://www.linkedin.com/embed/feed/update/urn:li:share:1234567893"
+                  title="Hotel Accommodations"
+                  description="Produced a video graphic showcasing the hotel amenities, combining visual elements to highlight the accommodation features for attendees."
+                  iframeSrc="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7234920916256714752?collapsed=1"
                 />
               </div>
             </div>
-          </div>
+          </section>
         </FadeInSection>
       </main>
     </div>

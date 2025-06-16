@@ -143,14 +143,23 @@ function App() {
           }
         });
       },
-      { threshold: 0.5 }
+      { 
+        threshold: 0.3,
+        rootMargin: '-10% 0px'
+      }
     );
 
     document.querySelectorAll('.chapter, .introduction').forEach((section) => {
       observer.observe(section);
     });
 
-    return () => observer.disconnect();
+    // Add passive scroll event listener
+    window.addEventListener('scroll', () => {}, { passive: true });
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('scroll', () => {});
+    };
   }, []);
 
   return (
