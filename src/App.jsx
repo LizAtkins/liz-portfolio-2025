@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import { projects } from './data/projects';
 import SocialMediaCampaign from './pages/SocialMediaCampaign';
 import UniversityConnect from './pages/UniversityConnect';
+import Resume from './pages/Resume';
 import './styles/_footer.scss';
 import profileAvatar from './assets/img/profile-avatar.png';
 
@@ -185,6 +186,7 @@ function App() {
                     <li><a href="#web" className={activeChapter === 1 ? 'active' : ''}>Web</a></li>
                     <li><a href="#visual" className={activeChapter === 2 ? 'active' : ''}>Visual</a></li>
                     <li><a href="#written" className={activeChapter === 3 ? 'active' : ''}>Written</a></li>
+                    <li><Link to="/resume">Resume</Link></li>
                   </ul>
                 </nav>
                 <div className="header-content">
@@ -238,6 +240,7 @@ function App() {
         } />
         <Route path="/university-connect" element={<UniversityConnect />} />
         <Route path="/social-media-campaign" element={<SocialMediaCampaign />} />
+        <Route path="/resume" element={<Resume />} />
       </Routes>
     </Router>
   );
