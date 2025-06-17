@@ -288,6 +288,21 @@ nav {
   }
 }
 
+@media (max-width: 768px) {
+  nav {
+    margin: 1rem 0;
+    
+    ul {
+      gap: 0.75rem;
+    }
+
+    li a {
+      font-size: 0.875rem;
+      padding: 0.375rem 0.75rem;
+    }
+  }
+}
+
 // Chapters styles
 .chapters {
   padding: 2rem 1rem;
