@@ -5,6 +5,7 @@ import clarionWebsite from '../assets/img/clarion_website.jpeg';
 import etsyShop from '../assets/img/etsy_shop.jpeg';
 import iiomCampaign from '../assets/img/iiom_campaign.jpeg';
 import webTutorial from '../assets/img/web_tutorial.jpg';
+import poemsWebsite from '../assets/img/poems_website.jpeg';
 
 export const projects = {
   web: [
@@ -83,6 +84,14 @@ export const projects = {
       category: "written",
       tags: ["Film Analysis", "Feminism", "Corporate Strategy", "Cultural Impact"],
       link: "https://www.sinclairclarion.com/home/entertainment/2023/09/10/the-barbie-movie-a-deep-dive-into-corporations-nostalgia-and-feminism/"
+    },
+    {
+      title: "Letters to Lovers: A Poetry Website",
+      description: "A creative writing project and poetry collection exploring love, longing, and the art of the unsent letter. Presented in a minimalist, literary-inspired web format.",
+      image: poemsWebsite,
+      category: "written",
+      tags: ["Creative Writing", "Personal Essays", "Digital Letters", "Literature"],
+      link: "https://lizatkins.github.io/letters-to-lovers/"
     }
   ]
 }; 
