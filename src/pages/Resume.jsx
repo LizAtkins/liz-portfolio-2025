@@ -84,7 +84,7 @@ const Resume = () => {
                   <ul>
                     <li>Contributed to a scalable monorepo architecture, writing clean, maintainable TypeScript across both frontend and backend codebases, and collaborating with team members via Git version control and code reviews.</li>
                     <li>Developed a "My Resources" feature allowing users to update or delete content; implemented secure CRUD operations using Angular services and Prisma queries.</li>
-                    <li>Built and implemented core UI components for the <a href="/liz-portfolio-2025/university-connect" target="_blank" rel="noopener noreferrer">University Connect platform</a>, creating a modern and intuitive user interface using Angular and Tailwind CSS.</li>
+                    <li>Built and implemented core UI components for the <Link to="/university-connect">University Connect platform</Link>, creating a modern and intuitive user interface using Angular and Tailwind CSS.</li>
                   </ul>
                 </div>
                 <div className="experience-item">
