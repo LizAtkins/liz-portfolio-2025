@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import ProjectCard from './components/ProjectCard';
@@ -164,7 +164,7 @@ function App() {
   }, []);
 
   return (
-    <Router basename="/liz-portfolio-2025">
+    <Router>
       <ScrollToSection />
       <Routes>
         <Route path="/" element={
