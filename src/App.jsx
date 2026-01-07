@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import ProjectCard from './components/ProjectCard';
@@ -125,6 +125,27 @@ const ScrollToSection = () => {
   return null;
 };
 
+// GitHub Pages 404 redirect handler
+const RedirectHandler = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  
+  useEffect(() => {
+    // Handle GitHub Pages 404 redirect
+    // The 404.html redirects to /?/path format, we need to convert it to proper routing
+    if (location.search.includes('?/')) {
+      const path = location.search
+        .replace(/^\?\/?/, '')
+        .replace(/~and~/g, '&')
+        .split('&')[0];
+      const newPath = path || '/';
+      navigate(newPath, { replace: true });
+    }
+  }, [location.search, navigate]);
+
+  return null;
+};
+
 function App() {
   const [activeChapter, setActiveChapter] = useState(0);
   const [isContactFormOpen, setIsContactFormOpen] = useState(false);
@@ -164,7 +185,8 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename="/liz-portfolio-2025">
+      <RedirectHandler />
       <ScrollToSection />
       <Routes>
         <Route path="/" element={
