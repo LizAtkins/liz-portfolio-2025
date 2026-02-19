@@ -1,100 +1,83 @@
-# Liz Atkins Portfolio 2025
+# Liz Atkins Portfolio
 
-A modern, narrative-driven portfolio website that tells a story through chapters. Each chapter represents a different aspect of my work, from web development to visual design, creating an engaging journey through my professional experience.
+A professional portfolio showcasing web development and visual design work. Built with React and Vite, with a clean layout and dedicated project pages.
 
-## 🌟 Features
+## Features
 
-- 📖 Story-driven navigation with chapters
-- 📚 Chapter-based content organization
-- 🎨 Smooth animations and transitions
-- 📱 Fully responsive design
-- 🖼️ Project showcase with interactive cards
-- 📧 Contact form with Formspree integration
-- ⚡ Built with React and modern web technologies
+- **Animated intro** — Typing effect on the homepage greeting (“Hi, I’m Liz”)
+- **Web Development** — Project cards and detail pages (e.g. EV Charging Map, University Connect, NA-WAMS, PI Portal)
+- **Visual Design** — Email blasts, social campaigns, and design work with dedicated project pages
+- **Responsive layout** — Works on desktop, tablet, and mobile
+- **Contact form** — Formspree integration
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - React 18
 - Vite
+- React Router v6
 - SCSS/Sass
 - Framer Motion
-- React Router v6
-- GSAP (with @gsap/react)
 - React Icons
-- Formspree for contact form
 
-## 🚀 Getting Started
+## Getting Started
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/liz-portfolio-2025.git
-```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/lizatkins/liz-portfolio-2025.git
+   cd liz-portfolio-2025
+   ```
 
-2. Install dependencies:
-```bash
-npm install
-```
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-3. Start the development server:
-```bash
-npm run dev
-```
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:5173](http://localhost:5173) (or the URL Vite prints).
 
-4. Build for production:
-```bash
-npm run build
-```
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
 
-## 📁 Project Structure
+5. **Preview production build**
+   ```bash
+   npm run preview
+   ```
+
+## Project Structure
 
 ```
 src/
-├── components/     # Reusable UI components
-├── pages/         # Page components
-├── features/      # Feature-specific components
-├── context/       # React context providers
-├── styles/        # SCSS styles
-├── data/          # Project data and content
-├── assets/        # Images and media
-├── App.jsx        # Main application component
-└── main.jsx       # Application entry point
+├── components/     # Reusable UI (ProjectCard, Footer, ContactForm, etc.)
+├── pages/         # Route pages (Resume, project detail pages)
+├── context/       # Theme context
+├── data/          # projects.js (web & visual project data)
+├── styles/        # SCSS (main, theme, footer, etc.)
+├── assets/img/    # Images and screenshots
+├── App.jsx        # Routes, intro, Web & Visual sections
+└── main.jsx       # Entry point
 ```
 
-## 📝 Content Organization
+## Content Overview
 
-The portfolio is organized into chapters:
+- **Home** — Intro with typing animation, profile photo, and sections for Web and Visual projects
+- **Web** — EV Charging Map, University Connect, NA-WAMS, PI Portal, Windows Desktop Portfolio, The Clarion
+- **Visual** — HTML Email Blasts, Etsy Digital Print Shop, Social Media Campaign
+- **Resume** — Interactive resume with links to project pages
 
-1. **Introduction** - Welcome and overview
-2. **Web Chapter** - Web development projects
-3. **Visual Chapter** - Design and visual work
-4. **Written Chapter** - Content and technical writing
+## Deploy (GitHub Pages)
 
-Each chapter contains:
-- A narrative introduction
-- Project cards with details
-- Interactive elements
-- Smooth transitions
+```bash
+npm run build
+npm run deploy
+```
 
-## 🎨 Customization
+Uses `gh-pages` to publish the `dist` folder. The app uses `basename: "/liz-portfolio-2025"` for client-side routing on GitHub Pages.
 
-1. Update project data in `src/data/`
-2. Modify styles in `src/styles/`
-3. Add your own images to the `src/assets` directory
-4. Customize components in `src/components/`
+## License
 
-## 📱 Responsive Design
-
-The portfolio is fully responsive and works on:
-- Desktop computers
-- Tablets
-- Mobile devices
-- Different screen orientations
-
-
-## 🤝 Contributing
-
-Feel free to submit issues and enhancement requests!
-
-## 📄 License
-
-MIT License - feel free to use this template for your own portfolio!
+MIT License — feel free to use this as a template for your own portfolio.
