@@ -22,7 +22,11 @@ const ProjectCard = ({ title, description, image, quote, category, tags, link })
         <div className="project-image">
           <img src={image} alt={`${title} project preview`} />
         </div>
-      ) : null}
+      ) : (
+        <div className="project-image project-image--placeholder" aria-hidden="true">
+          <span className="project-image-placeholder-text">Not publicly available</span>
+        </div>
+      )}
       <div className="project-content">
         {link && (
           isInternalLink ? (

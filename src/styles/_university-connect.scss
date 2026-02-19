@@ -31,6 +31,25 @@
       font-weight: 600;
     }
   }
+
+  .contribution-list {
+    margin: 0 0 1rem 1.5rem;
+    padding: 0;
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.65;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    code {
+      font-size: 0.9em;
+      padding: 0.15rem 0.4rem;
+      background: var(--color-surface-dark);
+      border-radius: 4px;
+    }
+  }
 }
 
 .tech-stack {

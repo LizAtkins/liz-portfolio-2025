@@ -23,7 +23,6 @@ const Resume = () => {
               <li><Link to="/">Home</Link></li>
               <li><Link to="/#web">Web</Link></li>
               <li><Link to="/#visual">Visual</Link></li>
-              <li><Link to="/#written">Written</Link></li>
               <li><Link to="/resume">Resume</Link></li>
             </ul>
           </nav>
@@ -44,7 +43,7 @@ const Resume = () => {
             <section className="resume-content">
               <div className="resume-header">
                 <h1>LIZ ATKINS</h1>
-                <h2>Web Developer</h2>
+                <h2>Frontend Developer</h2>
                 <div className="contact-info">
                   <p>Dayton, OH</p>
                   <div className="social-links">
@@ -68,15 +67,23 @@ const Resume = () => {
               <section className="resume-section">
                 <h3>SUMMARY</h3>
                 <p>
-                  Front-end focused web developer skilled in writing custom HTML, CSS, and JavaScript to build
-                  responsive and accessible websites. I've worked on <a href="https://github.com/LizAtkins/conference-landing-page" target="_blank" rel="noopener noreferrer">conference event websites</a>, <a href="https://github.com/LizAtkins/TarotCardProgram" target="_blank" rel="noopener noreferrer">back-end applications</a>,
-                  and <a href="https://github.com/LizAtkins/css-glinda" target="_blank" rel="noopener noreferrer">CSS illustrations</a>, bringing both functionality and artistry to the web. Passionate about working on
-                  projects that have a meaningful impact and improve the lives of others.
+                  Frontend Developer specializing in modern, responsive applications for government and defense programs. Experienced in React, Angular, and TypeScript, including dashboards, forms, and content-driven interfaces. Skilled at modernizing legacy systems, creating reusable component architectures, and improving usability and accessibility in compliance-driven environments. Passionate about delivering mission-focused software that enhances user experience and supports high-impact programs.
                 </p>
               </section>
 
               <section className="resume-section">
                 <h3>Work Experience</h3>
+                <div className="experience-item">
+                  <h4>Software Engineer Intern</h4>
+                  <p className="company"><Link to="/afosr-platform">Mile Two (PI Portal)</Link></p>
+                  <p className="date">Jul 2025 – Present</p>
+                  <ul>
+                    <li>Contributed to the modernization of a legacy system by transitioning core functionality into a modular React and TypeScript architecture, significantly improving maintainability and long-term scalability.</li>
+                    <li>Re-engineered legacy workflows with structured validation and accessibility improvements, strengthening data integrity across research program operations.</li>
+                    <li>Integrated Go-based REST APIs to support the newly modernized UI, enabling evolving program requirements without increasing technical debt.</li>
+                    <li>Delivered work within a compliance-driven environment requiring documentation discipline, controlled versioning, and review cycles.</li>
+                  </ul>
+                </div>
                 <div className="experience-item">
                   <h4>Full Stack Developer</h4>
                   <p className="company">Seer Consulting LLC · Full-time</p>
@@ -98,7 +105,7 @@ const Resume = () => {
                       increase in attendance at our largest client conference, <a href="https://www.dmcmeeting.com/" target="_blank" rel="noopener noreferrer">Defense Manufacturing Conference</a>, from 1,509 to 2,025 participants.
                     </li>
                     <li>
-                      Enhanced email marketing efforts by incorporating modern, responsive HTML templates, leading to
+                      Enhanced <Link to="/email-blasts">email marketing</Link> efforts by incorporating modern, responsive HTML templates, leading to
                       visually appealing and mobile-friendly emails that ensured design consistency and improved campaign
                       engagement.
                     </li>
@@ -158,7 +165,11 @@ const Resume = () => {
                   <span className="skill-tag">User Experience (UX)</span>
                   <span className="skill-tag">Visual Storytelling</span>
                   <span className="skill-tag">React</span>
+                  <span className="skill-tag">TypeScript</span>
                   <span className="skill-tag">JavaScript</span>
+                  <span className="skill-tag">Go</span>
+                  <span className="skill-tag">REST APIs</span>
+                  <span className="skill-tag">Accessibility</span>
                   <span className="skill-tag">SEO</span>
                   <span className="skill-tag">Web Content Writing</span>
                   <span className="skill-tag">Adobe Photoshop</span>
@@ -169,6 +180,7 @@ const Resume = () => {
                   <span className="skill-tag">Social Media Marketing</span>
                   <span className="skill-tag">Google Analytics</span>
                   <span className="skill-tag">Git/GitHub</span>
+                  <span className="skill-tag">Code Review</span>
                   <span className="skill-tag">Visual Studio</span>
                   <span className="skill-tag">Microsoft Access</span>
                   <span className="skill-tag">SQL</span>

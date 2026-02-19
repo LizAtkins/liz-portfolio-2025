@@ -9,40 +9,36 @@ import Footer from './components/Footer';
 import { projects } from './data/projects';
 import SocialMediaCampaign from './pages/SocialMediaCampaign';
 import UniversityConnect from './pages/UniversityConnect';
+import EvChargingMap from './pages/EvChargingMap';
+import NAWams from './pages/NAWams';
+import AfosrPlatform from './pages/AfosrPlatform';
+import EmailBlasts from './pages/EmailBlasts';
 import Resume from './pages/Resume';
 import './styles/_footer.scss';
-import profileAvatar from './assets/img/profile-avatar.png';
+import profilePhoto from './assets/img/profile.png';
 
-// Introduction Component
+// Introduction
 const Introduction = () => (
-  <section className="introduction">
+  <section className="introduction" data-section="0">
     <div className="introduction-content">
-      <h2>Welcome to My Story</h2>
+      <h2>Hi, I'm Liz</h2>
       <p className="introduction-text">
-        Every project tells a story. From web development to visual design, 
-        each piece of work represents a unique chapter in my journey of creating 
-        meaningful digital experiences. Scroll through these chapters to explore 
-        how I bring ideas to life through code, design, and compelling writing.
+        I build responsive web applications and interfaces with React, TypeScript, and modern tooling—focused on clean architecture, accessibility, and on-brand visual design. Here's a selection of my work in development and design.
       </p>
       <div className="scroll-indicator">
-        <span>Scroll to begin the journey</span>
+        <span>Scroll to view projects</span>
         <div className="scroll-arrow">↓</div>
       </div>
     </div>
   </section>
 );
 
-// Chapter Components
-const WebChapter = () => (
-  <section 
-    id="web"
-    className="chapter"
-    data-chapter="1"
-  >
+// Project sections (no chapter framing)
+const WebSection = () => (
+  <section id="web" className="chapter" data-section="1">
     <div className="chapter-header">
-      <span className="chapter-number">Chapter 1</span>
-      <h2>The Web Chapter</h2>
-      <p className="chapter-intro">Where structure meets story—this is where ideas become interactive. Each project here represents a unique digital journey, crafted with purpose and precision.</p>
+      <h2>Web Development</h2>
+      <p className="chapter-intro">Front-end and full-stack projects—responsive sites, component-based UIs, and clean code.</p>
     </div>
     <div className="project-grid">
       {projects.web.map((project, index) => (
@@ -52,57 +48,14 @@ const WebChapter = () => (
   </section>
 );
 
-const VisualChapter = () => (
-  <section 
-    id="visual"
-    className="chapter"
-    data-chapter="2"
-  >
+const VisualSection = () => (
+  <section id="visual" className="chapter" data-section="2">
     <div className="chapter-header">
-      <span className="chapter-number">Chapter 2</span>
-      <h2>The Visual Chapter</h2>
-      <p className="chapter-intro">Designs that speak before a single word is read. Here, we explore the power of visual storytelling through carefully crafted designs that capture attention and convey meaning.</p>
+      <h2>Visual Design</h2>
+      <p className="chapter-intro">Digital design, branding, and social content that connects with audiences.</p>
     </div>
     <div className="project-grid">
       {projects.visual.map((project, index) => (
-        <ProjectCard key={index} {...project} />
-      ))}
-    </div>
-  </section>
-);
-
-const InboxChapter = () => (
-  <section 
-    id="inbox"
-    className="chapter"
-    data-chapter="3"
-  >
-    <div className="chapter-header">
-      <span className="chapter-number">Chapter 3</span>
-      <h2>The Inbox Chapter</h2>
-      <p className="chapter-intro">Email campaigns that actually get read—and clicked. Discover how strategic communication can transform the inbox into a powerful engagement tool.</p>
-    </div>
-    <div className="project-grid">
-      {projects.inbox.map((project, index) => (
-        <ProjectCard key={index} {...project} />
-      ))}
-    </div>
-  </section>
-);
-
-const WrittenChapter = () => (
-  <section 
-    id="written"
-    className="chapter"
-    data-chapter="3"
-  >
-    <div className="chapter-header">
-      <span className="chapter-number">Chapter 3</span>
-      <h2>The Written Chapter</h2>
-      <p className="chapter-intro">Clear, concise, or creative—these words do the heavy lifting. Explore how strategic writing can shape narratives and drive engagement across platforms.</p>
-    </div>
-    <div className="project-grid">
-      {projects.written.map((project, index) => (
         <ProjectCard key={index} {...project} />
       ))}
     </div>
@@ -147,41 +100,30 @@ const RedirectHandler = () => {
 };
 
 function App() {
-  const [activeChapter, setActiveChapter] = useState(0);
+  const [activeSection, setActiveSection] = useState(0);
   const [isContactFormOpen, setIsContactFormOpen] = useState(false);
 
   useEffect(() => {
-    // Initialize theme
     const savedTheme = localStorage.getItem('theme') || 'dark';
     document.documentElement.classList.add(`theme-${savedTheme}`);
 
-    // Intersection Observer for chapter tracking
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const chapter = entry.target.getAttribute('data-chapter');
-            setActiveChapter(parseInt(chapter));
+            const section = entry.target.getAttribute('data-section');
+            if (section != null) setActiveSection(parseInt(section, 10));
           }
         });
       },
-      { 
-        threshold: 0.3,
-        rootMargin: '-10% 0px'
-      }
+      { threshold: 0.3, rootMargin: '-10% 0px' }
     );
 
     document.querySelectorAll('.chapter, .introduction').forEach((section) => {
       observer.observe(section);
     });
 
-    // Add passive scroll event listener
-    window.addEventListener('scroll', () => {}, { passive: true });
-
-    return () => {
-      observer.disconnect();
-      window.removeEventListener('scroll', () => {});
-    };
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -195,29 +137,19 @@ function App() {
             <header>
               <FadeInSection>
                 <nav>
-                  <div className="chapter-progress">
-                    <div className="progress-bar">
-                      <div 
-                        className="progress-fill"
-                        style={{ width: `${(activeChapter / 3) * 100}%` }}
-                      />
-                    </div>
-                  </div>
                   <ul>
-                    <li><Link to="/" className={activeChapter === 0 ? 'active' : ''}>Home</Link></li>
-                    <li><a href="#web" className={activeChapter === 1 ? 'active' : ''}>Web</a></li>
-                    <li><a href="#visual" className={activeChapter === 2 ? 'active' : ''}>Visual</a></li>
-                    <li><a href="#written" className={activeChapter === 3 ? 'active' : ''}>Written</a></li>
+                    <li><Link to="/" className={activeSection === 0 ? 'active' : ''}>Home</Link></li>
+                    <li><a href="#web" className={activeSection === 1 ? 'active' : ''}>Web</a></li>
+                    <li><a href="#visual" className={activeSection === 2 ? 'active' : ''}>Visual</a></li>
                     <li><Link to="/resume">Resume</Link></li>
                   </ul>
                 </nav>
                 <div className="header-content">
                   <h1>Liz Atkins</h1>
-                  <img src={profileAvatar} alt="Liz Atkins Profile Avatar" className="profile-avatar" />
+                  <img src={profilePhoto} alt="Liz Atkins" className="profile-avatar" />
                   <div className="title-container">
                     <p className="title">Web Development</p>
                     <p className="title">Visual Design</p>
-                    <p className="title">Writing & Content Strategy</p>
                   </div>
                   <div className="social-links">
                     <a href="https://github.com/lizatkins" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
@@ -243,13 +175,10 @@ function App() {
                 <Introduction />
               </FadeInSection>
               <FadeInSection delay={0.2}>
-                <WebChapter />
+                <WebSection />
               </FadeInSection>
               <FadeInSection delay={0.3}>
-                <VisualChapter />
-              </FadeInSection>
-              <FadeInSection delay={0.4}>
-                <WrittenChapter />
+                <VisualSection />
               </FadeInSection>
             </main>
 
@@ -260,8 +189,12 @@ function App() {
             />
           </div>
         } />
+        <Route path="/ev-charging-map" element={<EvChargingMap />} />
+        <Route path="/na-wams" element={<NAWams />} />
+        <Route path="/afosr-platform" element={<AfosrPlatform />} />
         <Route path="/university-connect" element={<UniversityConnect />} />
         <Route path="/social-media-campaign" element={<SocialMediaCampaign />} />
+        <Route path="/email-blasts" element={<EmailBlasts />} />
         <Route path="/resume" element={<Resume />} />
       </Routes>
     </Router>

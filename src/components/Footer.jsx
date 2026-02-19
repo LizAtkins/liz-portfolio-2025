@@ -6,18 +6,17 @@ const Footer = ({ setIsContactFormOpen }) => {
 
   return (
     <FadeInSection>
-      <footer className="story-footer">
+      <footer className="site-footer">
         <div className="footer-content">
-          <div className="footer-chapter">
-            <h3>The Epilogue</h3>
+          <div className="footer-cta">
+            <h3>Let's work together</h3>
             <p>
-              Every story has an ending, but this one is just beginning. 
-              Let's write the next chapter together.
+              Have a project in mind? I'd love to hear from you.
             </p>
           </div>
-          
+
           <div className="footer-connect">
-            <h4>Connect with the Author</h4>
+            <h4>Connect</h4>
             <div className="social-links">
               <a href="https://github.com/lizatkins" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
                 <FaGithub />
@@ -37,7 +36,6 @@ const Footer = ({ setIsContactFormOpen }) => {
 
           <div className="footer-copyright">
             <p>© {currentYear} Liz Atkins. All rights reserved.</p>
-            <p className="footer-quote">"The best stories are the ones we create together."</p>
           </div>
         </div>
       </footer>
