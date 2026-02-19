@@ -17,11 +17,48 @@ import Resume from './pages/Resume';
 import './styles/_footer.scss';
 import profilePhoto from './assets/img/profile.png';
 
-// Introduction
-const Introduction = () => (
+// Typing animation for intro heading
+const TYPING_TEXT = "Hi, I'm Liz.";
+const TYPING_SPEED_MS = 120;
+const BACKSPACE_SPEED_MS = 80;
+const PAUSE_AT_END_MS = 2000;
+const PAUSE_AT_START_MS = 800;
+
+const Introduction = () => {
+  const [displayText, setDisplayText] = useState('');
+  const [isTyping, setIsTyping] = useState(true);
+
+  useEffect(() => {
+    if (isTyping) {
+      if (displayText.length < TYPING_TEXT.length) {
+        const t = setTimeout(() => {
+          setDisplayText(TYPING_TEXT.slice(0, displayText.length + 1));
+        }, TYPING_SPEED_MS);
+        return () => clearTimeout(t);
+      } else {
+        const t = setTimeout(() => setIsTyping(false), PAUSE_AT_END_MS);
+        return () => clearTimeout(t);
+      }
+    } else {
+      if (displayText.length > 0) {
+        const t = setTimeout(() => {
+          setDisplayText(displayText.slice(0, -1));
+        }, BACKSPACE_SPEED_MS);
+        return () => clearTimeout(t);
+      } else {
+        const t = setTimeout(() => setIsTyping(true), PAUSE_AT_START_MS);
+        return () => clearTimeout(t);
+      }
+    }
+  }, [displayText, isTyping]);
+
+  return (
   <section className="introduction" data-section="0">
     <div className="introduction-content">
-      <h2>Hi, I'm Liz</h2>
+      <h2 className="intro-typing">
+        {displayText}
+        <span className="typing-cursor" aria-hidden="true">|</span>
+      </h2>
       <p className="introduction-text">
         I build responsive web applications and interfaces with React, TypeScript, and modern tooling—focused on clean architecture, accessibility, and on-brand visual design. Here's a selection of my work in development and design.
       </p>
@@ -31,7 +68,8 @@ const Introduction = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 // Project sections (no chapter framing)
 const WebSection = () => (

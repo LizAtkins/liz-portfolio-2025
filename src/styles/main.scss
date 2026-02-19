@@ -682,6 +682,16 @@ nav {
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
+
+      &.intro-typing {
+        -webkit-text-fill-color: transparent;
+      }
+
+      .typing-cursor {
+        -webkit-text-fill-color: initial;
+        color: var(--color-accent);
+        animation: cursor-blink 0.9s step-end infinite;
+      }
     }
 
     .introduction-text {
@@ -720,6 +730,12 @@ nav {
   }
   60% {
     transform: translateY(-5px);
+  }
+}
+
+@keyframes cursor-blink {
+  50% {
+    opacity: 0;
   }
 }
 
