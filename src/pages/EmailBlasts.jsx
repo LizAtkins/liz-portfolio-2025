@@ -36,21 +36,20 @@ const EmailBlasts = () => {
         </FadeInSection>
       </header>
 
-      <main>
-        <FadeInSection>
-          <section className="chapter">
+      <main className="chapters">
+        <section className="chapter">
             <div className="chapter-header">
               <span className="chapter-number">Visual Design</span>
-              <h2>HTML Email Blasts</h2>
+              <h2>Email Marketing</h2>
               <p className="chapter-intro">
-                HTML email campaigns for Arctos event marketing. I coded responsive email templates and designed the graphics used in blasts for conferences and events—keeping layouts mobile-friendly and on-brand.
+                HTML email campaigns for event marketing. I coded responsive email templates and designed the graphics for conferences and events—keeping layouts mobile-friendly and on-brand.
               </p>
             </div>
 
             <section className="platform-overview">
               <h3>Overview</h3>
               <p>
-                At ARCTOS I created HTML email blasts for events and conferences, writing the HTML/CSS for responsive, client-compatible emails and designing the visuals (headers, graphics, CTAs). Emails were built to render consistently across clients and devices while matching each event’s branding.
+                I created HTML email campaigns for events and conferences, writing the HTML/CSS for responsive, client-compatible emails and designing the visuals (headers, graphics, CTAs). Emails were built to render consistently across clients and devices while matching each event’s branding.
               </p>
             </section>
 
@@ -89,7 +88,6 @@ const EmailBlasts = () => {
               </div>
             )}
           </section>
-        </FadeInSection>
       </main>
     </div>
   );

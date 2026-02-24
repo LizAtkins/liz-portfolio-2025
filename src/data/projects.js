@@ -60,11 +60,11 @@ export const projects = {
   ],
   visual: [
     {
-      title: "HTML Email Blasts",
-      description: "Coded and designed HTML email blasts for Arctos event marketing. Built responsive, on-brand templates and custom graphics for conference and event campaigns.",
+      title: "Email Marketing",
+      description: "Coded and designed HTML email campaigns for event marketing. Built responsive, on-brand templates and custom graphics for conference and event campaigns.",
       image: emailBlastsCard,
       category: "visual",
-      tags: ["HTML Email", "Responsive Design", "Graphic Design", "Email Marketing", "Arctos"],
+      tags: ["HTML Email", "Responsive Design", "Graphic Design", "Email Marketing"],
       link: "/email-blasts"
     },
     {
